@@ -23,7 +23,7 @@ searchBtn.on('click', handleSearch);
 // Build geolocationUrl
 const buildLocationUrl = (locationSearch) => {
 
-    const locationUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${locationSearch}&appid=${apiKey}`;
+    const locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${locationSearch}&appid=${apiKey}`;
     getLocation(locationUrl);
     console.log(locationUrl);
 
