@@ -62,7 +62,7 @@ const getweather = (weatherUrl) => {
             return response.json();
         })
         .then(function (response) {
-            console.log('current forcast');
+            console.log('current weathr');
             console.log(response);
             const weatherObj = response;
             renderWeather(weatherObj);
@@ -78,15 +78,19 @@ const getforcast = (forcastUrl) => {
             console.log('forcasted weather');
             console.log(response);
             const forcastObj = response;
-            renderWeather(forcastObj)
+            renderForcast(forcastObj)
         })
 
 }
 
-const renderWeather = (forcastObj, weatherObj) => {
+const renderWeather = (weatherObj) => {
 
-    console.log('current forcast');
+    console.log('current weathe34');
     console.log(weatherObj);
+}
+
+const renderForcast = (forcastObj) => {
+
     console.log('forcasted weather');
     console.log(forcastObj);
 }
