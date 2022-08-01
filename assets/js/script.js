@@ -1,7 +1,6 @@
 $(document).ready( function() {console.log('Your Document has loaded!')});
 
-const apiKey = '5f7b77913d91556efcc7a0db5977a502'
-
+const apiKey = 'placeholder'
 
 // Submit the form to fetch weather information
 const searchEl = $('#searchField');
