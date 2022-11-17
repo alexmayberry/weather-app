@@ -47,7 +47,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-2">
+        <div id="searchHistoryContainer" class="col-2">
           <h4>Previous Searches</h4>
           <ul class="list-group">
             <li class="list-group-item">previous search</li>
@@ -56,7 +56,7 @@
           </ul>
         </div>
 
-        <div class="col-4">
+        <div id="todayContainer" class="col-4">
           <div class="card" style="width: 18rem;">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
@@ -75,7 +75,16 @@
        
       </div>
     </div>
+    <div id="forcastContainer">
+
+    </div>
 </body>
+    <!-- use day.js to easily format dates -->
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+    integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+    crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>

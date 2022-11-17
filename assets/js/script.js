@@ -1,16 +1,24 @@
 $(document).ready( function() {console.log('Your Document has loaded!')});
 
+const weatherApiRootUrl = 'https://api.openweathermap.org';
 const apiKey = '5f7b77913d91556efcc7a0db5977a502'
 
 
 // Submit the form to fetch weather information
 const searchEl = $('#searchField');
 const searchBtn = $('#searchBtn');
+const searchHistoryContainer = $('#searchHistoryContainer');
+const todayContainer = $('#todayContainer');
+const forcastContainer = $('#forcastContainer');
+
+// Add timezone plugins to day.js
+dayjs.extend(window.dayjs_plugin_utc);
+dayjs.extend(window.dayjs_plugin_timezone);
 
 const handleSearch = (event) => {
         event.preventDefault();
         const locationSearch = searchEl.val()
-        console.log(searchEl.val());
+        console.log("searchEl.val: ", searchEl.val());
         buildLocationUrl(locationSearch);
 
 }
@@ -25,19 +33,20 @@ const buildLocationUrl = (locationSearch) => {
 
     const locationUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${locationSearch}&appid=${apiKey}`;
     getLocation(locationUrl);
-    console.log(locationUrl);
+    console.log("locationURl: ", locationUrl);
 
 }
 
 // Fetch geolocation information and pass to weather fetch function
 const getLocation = (locationUrl) => {
+    // side note: is fetch a vanilla js method??
     fetch(locationUrl)
         .then(function (response) {
-            console.log(response);
-            return response.json(); // what is this?
+            console.log("response: ", response);
+            return response.json(); 
         })
         .then(function (response) {
-            console.log(response);
+            console.log("JSONed response: ", response);
             const lat = response[0].lat;
             const lon = response[0].lon;
             buildWeatherUrl(lat, lon);
