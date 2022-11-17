@@ -1,7 +1,7 @@
 $(document).ready( function() {console.log('Your Document has loaded!')});
 
 const weatherApiRootUrl = 'https://api.openweathermap.org';
-const apiKey = '5f7b77913d91556efcc7a0db5977a502'
+const apiKey = 'd91f911bcf2c0f925fb6535547a5ddc9'
 
 
 // Submit the form to fetch weather information
