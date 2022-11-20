@@ -38,7 +38,7 @@
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" id="searchField" type="search" placeholder="Search by Region" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit" id="searchBtn">Search</button>
+              <button class="btn btn-success" type="submit" id="searchBtn">Search</button>
             </form>
           </div>
         </div>
@@ -46,21 +46,24 @@
     <div class="container">
       
       <div class="row">
-        
+
         <div class="col-2">
           <h4>Previous Searches</h4>
+          <button class="btn btn-danger" id="clearBtn">Clear Search History</button>
           <ul id="searchHistoryContainer" class="list-group">
           </ul>
         </div>
 
-          <div id="todayContainer" class="col-4">
+        <div class="col-10">
+          <div id="todayContainer" >
           </div>
-      
+
+          <div id="forecastHeader"></div>
           <div id="forecastContainer" style="display: flex; flex-direction: row; flex-wrap: wrap;">
           </div>
         </div>
-
       </div>
+
     </div>
 </body>
     <!-- Jqwewey -->
